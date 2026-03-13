@@ -30,8 +30,13 @@ const app = {
     console.log('Transcrição não encontrada após todas as tentativas.');
     return false
   },
-  getTranscription: () => { },
-  getViralMoment: () => { }
+  getTranscription: async () => { 
+    const response = await fetch(app.transcriptionURL);
+    return rsponwe.text();
+   },
+  getViralMoment: async () => { 
+    const transcription = await app.getTranscription();
+   }
 }
 
 const config = {
